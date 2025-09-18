@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Join the Movie Club</title>
+</head>
+<body>
+  <h1>Join the Movie Club</h1>
+  <form action="/join" method="POST">
+    <div>
+      <label>Email:</label><br>
+      <input type="text" name="email" value="<%= values.email || '' %>">
+      <div style="color:red"><%= errors.email || '' %></div>
+    </div>
+
+    <div>
+      <label>Password:</label><br>
+      <input type="password" name="password">
+      <div style="color:red"><%= errors.password || '' %></div>
+    </div>
+
+    <button type="submit">Join Now</button>
+  </form>
+</body>
+</html>
